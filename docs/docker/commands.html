@@ -7,12 +7,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>myDocs Ognjan Janev &mdash; myDocs 0.1 documentation</title>
+  <title>Commands &mdash; myDocs 0.1 documentation</title>
   
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
 
   
   
@@ -21,22 +21,22 @@
 
   
   <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
+    <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
-    <script type="text/javascript" src="_static/js/theme.js"></script>
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Commands" href="sphinx/commands.html" /> 
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Commands" href="../sphinx/commands.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -50,7 +50,7 @@
           
 
           
-            <a href="#" class="icon icon-home" alt="Documentation Home"> myDocs
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> myDocs
           
 
           
@@ -63,7 +63,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -83,11 +83,11 @@
             
               <p class="caption"><span class="caption-text">Sphinx</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="sphinx/commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/commands.html">Commands</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Docker</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="docker/commands.html">Commands</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Commands</a></li>
 </ul>
 
             
@@ -103,7 +103,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">myDocs</a>
+          <a href="../index.html">myDocs</a>
         
       </nav>
 
@@ -132,15 +132,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>myDocs Ognjan Janev</li>
+      <li>Commands</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/docker/commands.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -153,19 +153,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="mydocs-ognjan-janev">
-<h1>myDocs Ognjan Janev<a class="headerlink" href="#mydocs-ognjan-janev" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Sphinx</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="sphinx/commands.html">Commands</a></li>
-</ul>
+  <div class="section" id="commands">
+<h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
+<p>Common commands that I use with docker.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>When using windows use windows power shell to run the docker commands.</p>
 </div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Docker</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="docker/commands.html">Commands</a></li>
-</ul>
+<p>Run a container from an image in detached mode and
+map port 80 of the host to port 80 in the container:</p>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker run -d -p <span class="m">80</span>:80 image
+</pre></div>
+</div>
+<p>Run a container from an image in interactive mode,
+remove it afterwards and open a bash within the container:</p>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker run --rm -it image /bin/bash
+</pre></div>
 </div>
 </div>
 
@@ -177,8 +180,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="sphinx/commands.html" class="btn btn-neutral float-right" title="Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+        <a href="../sphinx/commands.html" class="btn btn-neutral float-left" title="Commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
