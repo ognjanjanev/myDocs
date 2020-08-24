@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Commands &mdash; myDocs 0.1 documentation</title>
+  <title>Dockerfile &mdash; myDocs 0.1 documentation</title>
   
 
   
@@ -36,8 +36,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Commands" href="../docker/commands.html" />
-    <link rel="prev" title="myDocs Ognjan Janev" href="../index.html" /> 
+    <link rel="prev" title="Commands" href="commands.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,13 +82,13 @@
             
             
               <p class="caption"><span class="caption-text">Sphinx</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Commands</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/commands.html">Commands</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Docker</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../docker/commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../docker/dockerfile.html">Dockerfile</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dockerfile</a></li>
 </ul>
 
             
@@ -136,13 +135,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Commands</li>
+      <li>Dockerfile</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/sphinx/commands.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/docker/dockerfile.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -155,20 +154,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="commands">
-<h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
-<p>Common commands that I use with sphinx to write this documentation.</p>
-<p>Create the directory structure for the documentation
-and all the needed build files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sphinx-quickstart
-</pre></div>
-</div>
-<p>Build a html documentation:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ make html
-</pre></div>
-</div>
-<p>Clean up the build folder:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ make clean
+  <div class="section" id="dockerfile">
+<h1>Dockerfile<a class="headerlink" href="#dockerfile" title="Permalink to this headline">¶</a></h1>
+<p>Syntax for writing the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>. A Dockerfile is simply a text-based script of instructions
+that is used to create a container image.</p>
+<p>Instruction to copy everything from the current directory in the root of the container.</p>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span><span class="k">COPY</span> . .
 </pre></div>
 </div>
 </div>
@@ -181,10 +172,8 @@ and all the needed build files:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../docker/commands.html" class="btn btn-neutral float-right" title="Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="../index.html" class="btn btn-neutral float-left" title="myDocs Ognjan Janev" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="commands.html" class="btn btn-neutral float-left" title="Commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
