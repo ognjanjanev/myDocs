@@ -16,5 +16,5 @@ myDocs Ognjan Janev
    :maxdepth: 2
    :caption: Docker
 
-   docker/commands
+   docker/docker
    docker/dockerfile

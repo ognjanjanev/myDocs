@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Commands &mdash; myDocs 0.1 documentation</title>
+  <title>docker &mdash; myDocs 0.1 documentation</title>
   
 
   
@@ -88,7 +88,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Docker</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Commands</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">docker</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#run">run</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#build">build</a></li>
 </ul>
@@ -140,13 +140,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Commands</li>
+      <li>docker</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/docker/commands.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/docker/docker.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -159,8 +159,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="commands">
-<h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="docker">
+<h1>docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h1>
 <p>Common commands that I use with docker.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -168,13 +168,13 @@
 </div>
 <div class="section" id="run">
 <h2>run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h2>
-<p>Run a container from an image in detached mode and
-map port 80 of the host to port 80 in the container:</p>
+<p>Run a container (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>) from an image (<code class="docutils literal notranslate"><span class="pre">image</span></code>) in detached (<code class="docutils literal notranslate"><span class="pre">-d</span></code>) mode
+and map port 80 of the host to port 80 in the container (<code class="docutils literal notranslate"><span class="pre">-p</span> <span class="pre">80:80</span></code>):</p>
 <div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker run -d -p <span class="m">80</span>:80 image
 </pre></div>
 </div>
-<p>Run a container from an image in interactive mode,
-remove it afterwards and open a bash within the container:</p>
+<p>Run a container (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>) from an image(<code class="docutils literal notranslate"><span class="pre">image</span></code>) in interactive mode (<code class="docutils literal notranslate"><span class="pre">-it</span></code>),
+remove(<code class="docutils literal notranslate"><span class="pre">--rm</span></code>) it afterwards and open a bash within the container (<code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code>):</p>
 <div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker run --rm -it image /bin/bash
 </pre></div>
 </div>
@@ -183,7 +183,7 @@ remove it afterwards and open a bash within the container:</p>
 <h2>build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
 <p>Build a docker image (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code>), and create a name tag
 with the name getting-started (<code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">getting-started</span></code>) from a
-Dockerfile in the current directory (`` .``):</p>
+Dockerfile in the current directory (<code class="docutils literal notranslate"><span class="pre">.</span></code>):</p>
 <div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker build -t getting-started .
 </pre></div>
 </div>
