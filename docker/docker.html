@@ -173,6 +173,10 @@ and map port 80 of the host to port 80 in the container (<code class="docutils l
 <div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker run -d -p <span class="m">80</span>:80 image
 </pre></div>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also abbreviate the options form <code class="docutils literal notranslate"><span class="pre">-d</span> <span class="pre">-p</span></code> to <code class="docutils literal notranslate"><span class="pre">-dp</span></code>.</p>
+</div>
 <p>Run a container (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>) from an image(<code class="docutils literal notranslate"><span class="pre">image</span></code>) in interactive mode (<code class="docutils literal notranslate"><span class="pre">-it</span></code>),
 remove(<code class="docutils literal notranslate"><span class="pre">--rm</span></code>) it afterwards and open a bash within the container (<code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code>):</p>
 <div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker run --rm -it image /bin/bash

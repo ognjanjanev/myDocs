@@ -18,6 +18,9 @@ and map port 80 of the host to port 80 in the container (``-p 80:80``):
 
     docker run -d -p 80:80 image
 
+.. tip::
+    You can also abbreviate the options form ``-d -p`` to ``-dp``.
+
 Run a container (``docker run``) from an image(``image``) in interactive mode (``-it``),
 remove(``--rm``) it afterwards and open a bash within the container (``/bin/bash``):
 
