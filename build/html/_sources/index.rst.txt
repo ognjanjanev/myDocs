@@ -17,3 +17,4 @@ myDocs Ognjan Janev
    :caption: Docker
 
    docker/commands
+   docker/dockerfile
