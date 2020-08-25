@@ -7,6 +7,15 @@ Common commands that I use with docker.
 
 .. attention::
     When using windows use windows power shell to run the docker commands.
+    
+pull
+====
+
+Pull an image (``docker pull image``) with the specified version(``:version``)
+
+.. code-block:: docker
+
+    docker pull image:version
 
 run
 ===
