@@ -47,3 +47,13 @@ Dockerfile in the current directory (``.``):
 .. code-block:: docker
 
     docker build -t getting-started .
+        
+exec
+====
+
+Run a command (``docker exec``) interactively (``-it``) in a running container with the id (``ic``)
+and that command is ``bash``.
+
+.. code-block:: docker
+
+    docker exec -it 1c bash
