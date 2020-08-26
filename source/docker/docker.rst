@@ -3,7 +3,7 @@ docker
 ======
 
 
-Common commands that I use with docker.
+Some common commands that I use with docker.
 
 .. attention::
     When using windows use windows power shell to run the docker commands.
