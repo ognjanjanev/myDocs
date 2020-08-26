@@ -79,4 +79,27 @@ Forcely (``-f``) stop a running container ad remove it:
 
 .. code-block:: docker
 
+    docker container rm -f <the-container-id>
     docker rm -f <the-container-id>
+
+tag
+===
+
+Create a copy of an image with a new name. (to be able to push it on docker hub)
+
+.. code-block:: docker
+
+    docker tag image-name ognjanjanev/image-name
+
+push
+====
+
+Push a docker image on docker hub.
+
+.. note::
+
+    If no image-tag is given latest will be pushed
+
+.. code-block:: docker
+
+    docker push ognjanjanev/image-name:image-tag
