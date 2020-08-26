@@ -11,7 +11,7 @@ Common commands that I use with docker.
 pull
 ====
 
-Pull an image (``docker pull image``) with the specified version(``:version``)
+Pull an image (``docker pull image``) with the specified version(``:version``):
 
 .. code-block:: docker
 
@@ -57,3 +57,26 @@ and that command is ``bash``.
 .. code-block:: docker
 
     docker exec -it 1c bash
+
+container
+=========
+
+Show all containers (``ls --all``), running and inactive:
+
+.. code-block:: docker
+
+    docker container ls --all
+    docker ps -a
+
+Remove (``rm``) docker container with the id 12345:
+
+.. code-block:: docker
+
+    docker container rm 12345
+    docker rm 12345
+
+Forcely (``-f``) stop a running container ad remove it:
+
+.. code-block:: docker
+
+    docker rm -f <the-container-id>
