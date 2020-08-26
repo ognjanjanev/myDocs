@@ -3,7 +3,7 @@ docker
 ======
 
 
-Common commands that I use with docker.
+Some common commands that I use with docker.
 
 .. attention::
     When using windows use windows power shell to run the docker commands.
@@ -97,7 +97,8 @@ push
 Push a docker image on docker hub.
 
 .. note::
-    if no image-tag is given latest will be pushed
+
+    If no image-tag is given latest will be pushed
 
 .. code-block:: docker
 
