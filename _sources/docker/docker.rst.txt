@@ -7,6 +7,15 @@ Common commands that I use with docker.
 
 .. attention::
     When using windows use windows power shell to run the docker commands.
+    
+pull
+====
+
+Pull an image (``docker pull image``) with the specified version(``:version``):
+
+.. code-block:: docker
+
+    docker pull image:version
 
 run
 ===
@@ -38,3 +47,58 @@ Dockerfile in the current directory (``.``):
 .. code-block:: docker
 
     docker build -t getting-started .
+        
+exec
+====
+
+Run a command (``docker exec``) interactively (``-it``) in a running container with the id (``ic``)
+and that command is ``bash``.
+
+.. code-block:: docker
+
+    docker exec -it 1c bash
+
+container
+=========
+
+Show all containers (``ls --all``), running and inactive:
+
+.. code-block:: docker
+
+    docker container ls --all
+    docker ps -a
+
+Remove (``rm``) docker container with the id 12345:
+
+.. code-block:: docker
+
+    docker container rm 12345
+    docker rm 12345
+
+Forcely (``-f``) stop a running container ad remove it:
+
+.. code-block:: docker
+
+    docker container rm -f <the-container-id>
+    docker rm -f <the-container-id>
+
+tag
+===
+
+Create a copy of an image with a new name. (to be able to push it on docker hub)
+
+.. code-block:: docker
+
+    docker tag image-name ognjanjanev/image-name
+
+push
+====
+
+Push a docker image on docker hub.
+
+.. note::
+    if no image-tag is given latest will be pushed
+
+.. code-block:: docker
+
+    docker push ognjanjanev/image-name:image-tag

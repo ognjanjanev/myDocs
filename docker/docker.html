@@ -89,11 +89,21 @@
 <p class="caption"><span class="caption-text">Docker</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pull">pull</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#run">run</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#build">build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exec">exec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#container">container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tag">tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#push">push</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dockerfile.html">Dockerfile</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Terminal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terminal/powershell.html">Powershell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../terminal/bash.html">bash</a></li>
 </ul>
 
             
@@ -166,6 +176,13 @@
 <p class="admonition-title">Attention</p>
 <p>When using windows use windows power shell to run the docker commands.</p>
 </div>
+<div class="section" id="pull">
+<h2>pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h2>
+<p>Pull an image (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">image</span></code>) with the specified version(<code class="docutils literal notranslate"><span class="pre">:version</span></code>):</p>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker pull image:version
+</pre></div>
+</div>
+</div>
 <div class="section" id="run">
 <h2>run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h2>
 <p>Run a container (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>) from an image (<code class="docutils literal notranslate"><span class="pre">image</span></code>) in detached (<code class="docutils literal notranslate"><span class="pre">-d</span></code>) mode
@@ -189,6 +206,50 @@ remove(<code class="docutils literal notranslate"><span class="pre">--rm</span><
 with the name getting-started (<code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">getting-started</span></code>) from a
 Dockerfile in the current directory (<code class="docutils literal notranslate"><span class="pre">.</span></code>):</p>
 <div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker build -t getting-started .
+</pre></div>
+</div>
+</div>
+<div class="section" id="exec">
+<h2>exec<a class="headerlink" href="#exec" title="Permalink to this headline">¶</a></h2>
+<p>Run a command (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span></code>) interactively (<code class="docutils literal notranslate"><span class="pre">-it</span></code>) in a running container with the id (<code class="docutils literal notranslate"><span class="pre">ic</span></code>)
+and that command is <code class="docutils literal notranslate"><span class="pre">bash</span></code>.</p>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker <span class="nb">exec</span> -it 1c bash
+</pre></div>
+</div>
+</div>
+<div class="section" id="container">
+<h2>container<a class="headerlink" href="#container" title="Permalink to this headline">¶</a></h2>
+<p>Show all containers (<code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">--all</span></code>), running and inactive:</p>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker container ls --all
+docker ps -a
+</pre></div>
+</div>
+<p>Remove (<code class="docutils literal notranslate"><span class="pre">rm</span></code>) docker container with the id 12345:</p>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker container rm <span class="m">12345</span>
+docker rm <span class="m">12345</span>
+</pre></div>
+</div>
+<p>Forcely (<code class="docutils literal notranslate"><span class="pre">-f</span></code>) stop a running container ad remove it:</p>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker container rm -f &lt;the-container-id&gt;
+docker rm -f &lt;the-container-id&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="tag">
+<h2>tag<a class="headerlink" href="#tag" title="Permalink to this headline">¶</a></h2>
+<p>Create a copy of an image with a new name. (to be able to push it on docker hub)</p>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker tag image-name ognjanjanev/image-name
+</pre></div>
+</div>
+</div>
+<div class="section" id="push">
+<h2>push<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h2>
+<p>Push a docker image on docker hub.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if no image-tag is given latest will be pushed</p>
+</div>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker push ognjanjanev/image-name:image-tag
 </pre></div>
 </div>
 </div>

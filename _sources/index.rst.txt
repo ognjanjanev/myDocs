@@ -18,3 +18,10 @@ myDocs Ognjan Janev
 
    docker/docker
    docker/dockerfile
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Terminal
+
+   terminal/powershell
+   terminal/bash
