@@ -96,6 +96,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#container">container</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tag">tag</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#push">push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#volume">volume</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dockerfile.html">Dockerfile</a></li>
@@ -104,6 +105,10 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../terminal/powershell.html">Powershell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../terminal/bash.html">bash</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Version Control</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../versionControl/git.html">Git</a></li>
 </ul>
 
             
@@ -211,9 +216,12 @@ Dockerfile in the current directory (<code class="docutils literal notranslate">
 </div>
 <div class="section" id="exec">
 <h2>exec<a class="headerlink" href="#exec" title="Permalink to this headline">¶</a></h2>
-<p>Run a command (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span></code>) interactively (<code class="docutils literal notranslate"><span class="pre">-it</span></code>) in a running container with the id (<code class="docutils literal notranslate"><span class="pre">ic</span></code>)
-and that command is <code class="docutils literal notranslate"><span class="pre">bash</span></code>.</p>
+<p>Open a bash terminal interactively (<code class="docutils literal notranslate"><span class="pre">-it</span></code>) in a running container with the id (<code class="docutils literal notranslate"><span class="pre">ic</span></code>).</p>
 <div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker <span class="nb">exec</span> -it 1c bash
+</pre></div>
+</div>
+<p>Display a file contents in a running container.</p>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker <span class="nb">exec</span> &lt;container id&gt; cat filename
 </pre></div>
 </div>
 </div>
@@ -247,9 +255,21 @@ docker rm -f &lt;the-container-id&gt;
 <p>Push a docker image on docker hub.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If no image-tag is given latest will be pushed</p>
+<p>Create a repository for your app on docker hub
+for example ognjanjanev/image-name. Then push your
+local image with the command bellow.</p>
+<p>If no image-tag is given latest will be pushed.</p>
 </div>
 <div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker push ognjanjanev/image-name:image-tag
+</pre></div>
+</div>
+</div>
+<div class="section" id="volume">
+<h2>volume<a class="headerlink" href="#volume" title="Permalink to this headline">¶</a></h2>
+<p>Create a volume, mount it (<code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">todo-db:/etc/todo-db</span></code>) and inspect it.</p>
+<div class="highlight-docker notranslate"><div class="highlight"><pre><span></span>docker volume create todo-db
+docker run -dp <span class="m">3000</span>:3000 -v todo-db:/etc/todo-db image
+docker volume inspect todo-db
 </pre></div>
 </div>
 </div>

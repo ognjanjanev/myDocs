@@ -10,4 +10,10 @@ Get all running processes:
   
 .. note::
 
-  CTRL+C or q	Stops the top command.  
+  CTRL+C or q	Stops the top command.
+
+display a file in bash:
+
+.. code-block:: bash
+
+  cat filename

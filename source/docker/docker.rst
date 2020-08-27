@@ -51,12 +51,17 @@ Dockerfile in the current directory (``.``):
 exec
 ====
 
-Run a command (``docker exec``) interactively (``-it``) in a running container with the id (``ic``)
-and that command is ``bash``.
+Open a bash terminal interactively (``-it``) in a running container with the id (``ic``).
 
 .. code-block:: docker
 
     docker exec -it 1c bash
+
+Display a file contents in a running container.
+
+.. code-block:: docker
+
+    docker exec <container id> cat filename
 
 container
 =========
@@ -98,8 +103,23 @@ Push a docker image on docker hub.
 
 .. note::
 
-    If no image-tag is given latest will be pushed
+    Create a repository for your app on docker hub
+    for example ognjanjanev/image-name. Then push your
+    local image with the command bellow.
+
+    If no image-tag is given latest will be pushed.
 
 .. code-block:: docker
 
     docker push ognjanjanev/image-name:image-tag
+
+volume
+======
+
+Create a volume, mount it (``-v todo-db:/etc/todo-db``) and inspect it.
+
+.. code-block:: docker
+
+    docker volume create todo-db
+    docker run -dp 3000:3000 -v todo-db:/etc/todo-db image
+    docker volume inspect todo-db
