@@ -25,3 +25,9 @@ myDocs Ognjan Janev
 
    terminal/powershell
    terminal/bash
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Version Control
+
+   versionControl/git
